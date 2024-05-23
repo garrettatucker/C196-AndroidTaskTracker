@@ -1,0 +1,204 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:visibility="visible" />
+
+    <Button
+            android:id="@+id/buttonEditCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:text="Edit Course"
+            android:layout_marginTop="16dp"/>
+    <Button
+            android:id="@+id/buttonViewNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonEditCourse"
+            android:text="View Notes"
+            android:layout_marginTop="16dp"/>
+
+    <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonViewNotes"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    <TextView
+            android:id="@+id/text_view_course_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTitle"
+            android:text="Course:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    <TextView
+            android:id="@+id/text_view_course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_course_label"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp" />
+
+    <TextView
+            android:id="@+id/text_view_start_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_course_name"
+            android:layout_marginTop="16dp"
+            android:text="Start Date:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    <TextView
+            android:id="@+id/text_view_start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_start_date_label"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp" />
+
+    <TextView
+            android:id="@+id/text_view_end_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_start_date"
+            android:layout_marginTop="16dp"
+            android:text="End Date:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    <TextView
+            android:id="@+id/text_view_end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_end_date_label"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp" />
+
+    <TextView
+            android:id="@+id/text_view_term_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_end_date"
+            android:layout_marginTop="16dp"
+            android:text="Term:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    <TextView
+            android:id="@+id/text_view_term_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_term_label"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp" />
+
+    <!-- Add TextViews for additional course details -->
+    <TextView
+            android:id="@+id/text_view_instructor_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_term_name"
+            android:layout_marginTop="16dp"
+            android:text="Instructor Name:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    <TextView
+            android:id="@+id/text_view_instructor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_instructor_name_label"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp" />
+
+    <TextView
+            android:id="@+id/text_view_phone_number_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_instructor_name"
+            android:layout_marginTop="16dp"
+            android:text="Phone Number:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    <TextView
+            android:id="@+id/text_view_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_phone_number_label"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp" />
+
+    <TextView
+            android:id="@+id/text_view_email_address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_phone_number"
+            android:layout_marginTop="16dp"
+            android:text="Email Address:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    <TextView
+            android:id="@+id/text_view_email_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_email_address_label"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp" />
+
+    <TextView
+            android:id="@+id/text_view_progress_status_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_email_address"
+            android:layout_marginTop="16dp"
+            android:text="Progress Status:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    <TextView
+            android:id="@+id/text_view_progress_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_progress_status_label"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp" />
+
+    <TextView
+            android:id="@+id/text_view_notes_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_progress_status"
+            android:layout_marginTop="16dp"
+            android:text="Notes:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    <TextView
+            android:id="@+id/text_view_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_notes_label"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp" />
+
+</RelativeLayout>

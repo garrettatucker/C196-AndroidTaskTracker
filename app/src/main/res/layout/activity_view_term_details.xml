@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:visibility="visible" />
+
+    <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    <Button
+            android:id="@+id/buttonEnterTermDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/textViewTitle"
+            android:text="Enter New Term Details"
+            android:onClick="onEnterTermDetailsClick"
+            android:layout_centerHorizontal="true"/>
+
+    <Button
+            android:id="@+id/buttonEnterDeleteTerm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/buttonEnterTermDetails"
+            android:text="Delete a term"
+            android:onClick="onEnterDeleteTermClick"
+            android:layout_centerHorizontal="true"/>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_terms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/buttonEnterDeleteTerm"
+            android:layout_centerHorizontal="true"
+            />
+
+</RelativeLayout>

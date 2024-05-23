@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:visibility="visible" />
+    <TextView
+            android:id="@+id/textViewTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select a Term to Delete:"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="16dp"/>
+
+    <Spinner
+            android:id="@+id/spinnerTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTerms"
+            android:layout_marginTop="16dp"
+            android:entries="@array/terms_options"
+            android:padding="8dp"
+            android:spinnerMode="dropdown"/>
+    <Button
+            android:id="@+id/buttonDeleteTerm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinnerTerms"
+            android:text="Delete Term"
+            android:onClick="onDeleteTermClick"
+            android:layout_margin="8dp"/>
+</RelativeLayout>

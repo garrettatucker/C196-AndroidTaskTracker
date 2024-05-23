@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">C196GT</string>
+    <string-array name="status_options">
+        <item>In Progress</item>
+        <item>Completed</item>
+        <item>Dropped</item>
+        <item>Plan to Take</item>
+    </string-array>
+    <string-array name="assignment_options">
+        <item>Objective Assessment</item>
+        <item>Performance Assessment</item>
+    </string-array>
+    <string-array name="terms_options">
+        <item>Select Term</item>
+    </string-array>
+    <string-array name="course_options">
+        <item>Select course</item>
+    </string-array>
+</resources>

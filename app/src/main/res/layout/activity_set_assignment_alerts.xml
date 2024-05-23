@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:visibility="visible" />
+    <TextView
+            android:id="@+id/textDisclaimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note: Alerts will Display at Midnight EST"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="16dp"/>
+    <TextView
+            android:id="@+id/textViewAssignments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select an Assignment:"
+            android:layout_below="@id/textDisclaimer"
+            android:layout_marginTop="16dp"/>
+    <Spinner
+            android:id="@+id/spinnerAssignments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewAssignments"
+            android:layout_marginTop="16dp"
+            android:entries="@array/assignment_options"
+            android:padding="8dp"
+            android:spinnerMode="dropdown"/>
+    <CheckBox
+            android:id="@+id/startDateCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinnerAssignments"
+            android:text="Add Alert for Start Date"
+            android:checked="false"
+            android:layout_centerInParent="true" />
+    <CheckBox
+            android:id="@+id/endDateCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/startDateCheck"
+            android:text="Add Alert for End Date"
+            android:checked="false"
+            android:layout_centerInParent="true" />
+    <Button
+            android:id="@+id/buttonDeleteAssignment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/endDateCheck"
+            android:text="Add alert for Assignment"
+            android:onClick="onAddAssignmentAlertClick"
+            android:layout_margin="8dp"/>
+</RelativeLayout>

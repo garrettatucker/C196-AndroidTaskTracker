@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:visibility="visible" />
+
+    <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    <Button
+            android:id="@+id/buttonEnterAssignmentDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Enter New Assignment Details"
+            android:onClick="onEnterAssignmentDetailsClick"/>
+
+    <Button
+            android:id="@+id/buttonEnterDeleteAssignment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonEnterAssignmentDetails"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Delete an Assignment"
+            android:onClick="onEnterAssignmentDeleteClick"/>
+    <Button
+            android:id="@+id/buttonEnterAlertAssignment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonEnterDeleteAssignment"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Add an Alert"
+            android:onClick="onEnterAssignmentAlertClick"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_assignments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/buttonEnterAlertAssignment"
+            android:layout_centerHorizontal="true"/>
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal">
+
+    <Button
+            android:id="@+id/button_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"/> <!-- Adjust margin as needed -->
+
+    <!-- Add TextView for term name -->
+    <!--<TextView
+            android:id="@+id/text_view_term_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"/> -->
+
+</LinearLayout>

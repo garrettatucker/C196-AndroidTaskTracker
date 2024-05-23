@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="4dp"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                android:visibility="visible" />
+
+        <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        <!-- Course Name EditText -->
+        <EditText
+                android:id="@+id/editTextCourseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Course Name"
+                android:imeOptions="actionNext"
+                android:layout_marginTop="64dp"
+                android:singleLine="true"/>
+
+        <!-- Start Date Fields -->
+        <TextView
+                android:id="@+id/textViewStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Date:"
+                android:layout_below="@id/textViewTitle"
+                android:layout_marginTop="16dp"/>
+
+        <EditText
+                android:id="@+id/editTextStartMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="MM"
+                android:layout_below="@id/textViewStartDate"
+                android:layout_marginTop="8dp"
+                android:inputType="number"
+                android:maxLength="2"/>
+
+        <EditText
+                android:id="@+id/editTextStartDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="DD"
+                android:layout_below="@id/textViewStartDate"
+                android:layout_toEndOf="@id/editTextStartMonth"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:inputType="number"
+                android:maxLength="2"/>
+
+        <EditText
+                android:id="@+id/editTextStartYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="YYYY"
+                android:layout_below="@id/textViewStartDate"
+                android:layout_toEndOf="@id/editTextStartDay"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:inputType="number"
+                android:maxLength="4"/>
+
+        <!-- End Date Fields -->
+        <TextView
+                android:id="@+id/textViewEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End Date:"
+                android:layout_below="@id/editTextStartYear"
+                android:layout_marginTop="16dp"/>
+
+        <EditText
+                android:id="@+id/editTextEndMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="MM"
+                android:layout_below="@id/textViewEndDate"
+                android:layout_marginTop="8dp"
+                android:inputType="number"
+                android:maxLength="2"/>
+
+        <EditText
+                android:id="@+id/editTextEndDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="DD"
+                android:layout_below="@id/textViewEndDate"
+                android:layout_toEndOf="@id/editTextEndMonth"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:inputType="number"
+                android:maxLength="2"/>
+
+        <EditText
+                android:id="@+id/editTextEndYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="YYYY"
+                android:layout_below="@id/textViewEndDate"
+                android:layout_toEndOf="@id/editTextEndDay"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:inputType="number"
+                android:maxLength="4"/>
+
+        <!-- Progress Fields -->
+        <TextView
+                android:id="@+id/textViewStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Course Status:"
+                android:layout_below="@id/editTextEndYear"
+                android:layout_marginTop="16dp"/>
+        <Spinner
+                android:id="@+id/spinnerStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/status_options"
+                android:layout_below="@id/textViewStatus"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"/>
+
+        <TextView
+                android:id="@+id/textViewTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Term:"
+                android:layout_below="@id/spinnerStatus"
+                android:layout_marginTop="16dp"/>
+
+        <Spinner
+                android:id="@+id/spinnerTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewTerms"
+                android:layout_marginTop="16dp"
+                android:entries="@array/terms_options"
+                android:padding="8dp"
+                android:spinnerMode="dropdown"/>
+
+        <!-- CI Info Fields -->
+
+        <TextView
+                android:id="@+id/textViewCI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Course Instructor Information:"
+                android:layout_below="@id/spinnerTerms"
+                android:layout_marginTop="16dp"/>
+
+        <EditText
+                android:id="@+id/editTextInstructorName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Instructor Name"
+                android:layout_below="@id/textViewCI"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"/>
+
+        <EditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:layout_below="@id/editTextInstructorName"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:digits="1234567890"
+                android:maxLength="12"
+                android:imeOptions="actionNext"/>
+
+
+        <EditText
+                android:id="@+id/editTextEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:layout_below="@id/editTextPhoneNumber"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"/>
+
+        <TextView
+                android:id="@+id/textViewNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notes:"
+                android:layout_below="@id/editTextEmailAddress"
+                android:layout_marginTop="16dp"/>
+        <EditText
+                android:id="@+id/editTextNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Notes"
+                android:layout_below="@id/textViewNotes"
+                android:layout_marginTop="8dp"
+                android:inputType="textMultiLine"
+                android:minLines="3"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextNotes"
+                android:layout_marginTop="32dp"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+            <Button
+                    android:id="@+id/buttonAddCourse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Course"
+                    android:layout_marginEnd="8dp"/>
+
+            <Button
+                    android:id="@+id/buttonSubmitAndClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Course &amp; Start Another"
+                    android:layout_marginStart="8dp"/>
+        </LinearLayout>
+        <Button
+                android:id="@+id/buttonSbmtCourseEdit"
+                android:layout_below="@id/editTextNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit Changes"
+                android:layout_marginStart="8dp"/>
+
+    </RelativeLayout>
+</ScrollView>

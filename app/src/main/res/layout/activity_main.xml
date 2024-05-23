@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <!-- Header -->
+    <TextView
+            android:id="@+id/textViewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="C196 | Mobile Application Development"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+    <!-- Button Layout -->
+    <LinearLayout
+            android:id="@+id/layoutButtonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewHeader"
+            android:orientation="vertical"
+            android:gravity="center">
+
+        <!-- View Terms Button -->
+        <Button
+                android:id="@+id/buttonViewTermDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Terms"
+                android:onClick="onViewTermsDetailsClick"
+                android:layout_margin="8dp"/>
+
+        <!-- View Courses Button -->
+        <Button
+                android:id="@+id/buttonViewCourseDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Courses"
+                android:onClick="onViewCoursesDetailsClick"
+                android:layout_margin="8dp"/>
+
+        <!-- View Assignments Button -->
+        <Button
+                android:id="@+id/buttonViewAssignmentDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Assignments"
+                android:onClick="onViewAssignmentDetailsClick"
+                android:layout_margin="8dp"/>
+    </LinearLayout>
+
+    <!-- Footer -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_below="@id/layoutButtonLayout"
+                  android:gravity="center"
+                  android:orientation="vertical">
+
+        <!-- Footer -->
+        <TextView
+                android:id="@+id/textViewFooter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Created by: Garrett Tucker\nStudent ID: 010702000\nVersion: Alpha"
+                android:textSize="12sp"/>
+
+        <!-- Last Updated -->
+        <TextView
+                android:id="@+id/textViewLastUpdated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Updated:"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</RelativeLayout>
